@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import {Link} from 'react-router-dom'
 const Header = () => {
     const [nav, setNav] = useState(true)
     const handleNav = () => {
@@ -9,10 +9,10 @@ const Header = () => {
         <div className='flex justify-between item-center h-25 max-w-[1240px] mx-auto text-white'>
             <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Finxo</h1>
             <ul className='hidden md:flex'>
-                <li className='p-5 cursor-pointer hover:underline  hover:text-[#00df9a]'>Home</li>
+                <li className='p-5 cursor-pointer hover:underline  hover:text-[#00df9a]'><Link to={"/"}>Home</Link></li>
                 <li className='p-5 cursor-pointer hover:underline    hover:text-[#00df9a]'>Company</li>
                 <li className='p-5 cursor-pointer hover:underline    hover:text-[#00df9a]'>Resources</li>
-                <li className='p-5 cursor-pointer hover:underline    hover:text-[#00df9a]'>About</li>
+                <li className='p-5 cursor-pointer hover:underline    hover:text-[#00df9a]'><Link to={"/about"}>Aboutus</Link></li>
                 <li className='p-5 cursor-pointer hover:underline    hover:text-[#00df9a]'>Contact</li>
             </ul>
             <div onClick={handleNav} className='block md:hidden text-white'>
